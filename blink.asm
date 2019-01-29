@@ -10,7 +10,7 @@
 .dw 0b1110111110001111	;ldi r24, $ff     ;''
 .dw 0b1001011100000001	;sbiw r25:r24, 1  ;decrement prescaler by 1
 .dw 0b1111011111110001	;brne PC-1        ;loop until prescaler 0
-.dw 0b1001010100101010	;dec cntr         ;decrement counter by 1
+.dw 0b1001010100101010	;dec r18          ;decrement counter by 1
 .dw 0b1111011111010001	;brne PC-5        ;loop until counter 0
 .dw 0b0010011100000001	;eor r16, r17     ;xor compare between r16 & r17, output to r16
 .dw 0b1100111111110110	;rjmp PC-9        ;loop to step 5 where r16 is loaded to output register
